@@ -1,0 +1,32 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+.btn-primary {
+  display: block;
+  border-radius: 3px;
+  background-color: var(--serria);
+  padding: 25px;
+  border: 1px solid var(--serria);
+  width: 100%;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 92%;
+  transition: color .2s ease, background-color .2s ease;
+  @include hover {
+    background-color: transparent;
+  }
+  @include laptop {
+    font-size: 20px;
+    padding: 20px;
+  }
+  @include tablet {
+    font-size: 18px;
+  }
+}

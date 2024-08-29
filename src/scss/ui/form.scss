@@ -1,0 +1,100 @@
+.input {
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  background-color: white;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 137%;
+  padding: 25px 20px;
+  width: 100%;
+  &::placeholder {
+    color: inherit;
+    font-size: inherit;
+  }
+  @include tablet {
+    padding: 15px 10px;
+  }
+}
+
+.form {
+  max-width: 450px;
+  width: 100%;
+  &__item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  &__label-date {
+    cursor: pointer;
+    display: block;
+    color: black;
+  }
+  &__input {
+    &--textarea {
+      width: 100%;
+      display: block;
+      height: 225px;
+      resize: none;
+    }
+  }
+  &__date {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    &::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__btn {
+    margin-top: 35px;
+    @include tablet {
+      margin-top: 25px;
+    }
+  }
+  &__checked {
+    display: none;
+    &:checked + label {
+      &::before {
+        background: url('@img/check.svg') center / 13px 13px no-repeat;
+      }
+    }
+  }
+  &__politic {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-left: 30px;
+    font-weight: 300;
+    display: block;
+    margin-top: 15px;
+    font-size: 16px;
+    @include tablet {
+      font-size: 14px;
+    }
+    @include mobile {
+      font-size: 12px;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      width: 15px;
+      height: 15px;
+      border-radius: 3px;
+      border: 1px solid white;
+      left: 0;
+    }
+    a {
+      opacity: 0.8;
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

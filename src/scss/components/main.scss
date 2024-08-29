@@ -1,0 +1,111 @@
+.main {
+  padding: 50px 0px;
+  min-height: 100vh;
+  @include tablet {
+    padding: 25px 0px;
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &--politic {
+      max-width: 1500px;
+    }
+  }
+  &__logo {
+    display: inline-block;
+    margin-bottom: 45px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-radius: 4px;
+    padding: 75px 110px;
+    backdrop-filter: blur(40px);
+    background: rgba(0, 0, 0, 0.4);
+    @include laptop {
+      padding: 40px;
+    }
+    @include mobile {
+      padding: 25px 20px;
+    }
+  }
+  &__title {
+    margin: 0px 0px 25px 0px;
+  }
+  &__content {
+    font-size: 28px;
+    line-height: 102%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--serria);
+    text-align: center;
+    margin: 0px 0px 45px 0px;
+    &--politic {
+      font-weight: 300;
+      font-size: 18px !important;
+      text-align: start;
+      margin: 0;
+    }
+    @include laptop {
+      font-size: 24px;
+    }
+    @include tablet {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    @include mobile {
+      font-size: 18px;
+      margin-bottom: 20px;
+      &--politic {
+        font-size: 16px !important;
+      }
+    }
+  }
+  &__btn {
+    max-width: 450px;
+    &:not(:last-child) {
+      margin-bottom: 35px;
+    }
+    @include laptop {
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+    @include tablet {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__review-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    row-gap: 50px;
+    @include tablet {
+      row-gap: 30px;
+    }
+  }
+  &__review-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 0 1 calc(50% - 16px);
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+  &__review-logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+  &__review-btn {
+    max-width: 300px;
+    padding: 14px !important;
+    font-size: 18px;
+    line-height: 122%;
+  }
+}
